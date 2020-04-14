@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- don't forget the canvas to paint on  -->
+
+
+    <!-- for drawImage() -->
+
+    <!-- Image to use in HTML -->
+   
+
+    <!-- Create a canvas to fill -->
+   <canvas id = "myCanvas" width = "500" height = "500" style = "border: 3px solid black"></canvas>
+
+   <!--for drawImage()-->
+    <!--Image to use in HTML-->
+    <p>Image to use</p>
+    <img id = "kittens" src = "http://news.minneapolismn.gov/wp-content/uploads/2018/08/KittenFluffs4.jpg"
+    width = "600" height = "300">
+   
+    <!--Create a canvas to fill-->
+   <p>Canvas to fill</p>
+   <canvas id = "myKittensCanvas" width = "450" height = "350" style= "border: 1px black solid"></canvas>
+
+    <p> <button onclick = "myKittensCanvas()">Try it</button></p>
+
+
+    <script>
+
+        // draw a line
+        
+        // var line = document.getElementById("myCanvas");
+        // var ctx = line.getContext("2d");
+        // ctx.moveTo(100,50);
+        // ctx.lineTo(170,200);
+        // ctx.stroke();
+
+        // var line2 = document.getElementByID("myCanvas");
+        // var ctx = line2.getContext("2d");
+        // ctx.lineTo(270, 300);
+        // ctx.stroke();
+    
+
+        // draw a circle
+        
+        // var circle = document.getElementID("myCanvas");
+        // var ctx = circle.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(250, 250, 100, 0, 2*Math.PI);
+        // ctx.stroke();
+        
+        // draw a linear gradient 
+        
+        // var linearGradient = document.getElementID("myCanvas");
+        // var ctx = linearGradient.getContext("2d");
+           
+        //     // create the gradient
+
+        // var gradient = ctx.createLinearGradient(0, 0, 400, 0);
+        // gradient.addColorStop(0, "red");
+        // gradient.addColorStop(1, "blue");
+
+        //     // fill the gradient
+        // ctx.fillstyle = gradient;
+        // ctx.fillRect(10, 10, 500, 500);
+
+
+        // ********************Canvas part 2 tutorial *******************
+
+        // draw a radial gradient (circle)
+            var circGradient = document.getElementByID("myCanvas");
+            var ctx = circGradient.getContext("2d");
+            var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100)
+
+
+
+
+                //    create the gradient
+                gradient.addColorStop(0, "blue");
+                gradient.addColorStop(1, "white");
+     
+
+                //   fill the gradient
+                ctx.fillStyle = gradient;
+                ctx.fillrect(10, 10, 150, 80)
+
+
+
+
+        // drawText()
+
+        var textContent = document.getElementByID("myCanvas");
+        var ctx = textContent.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("hello world", 100, 100);
+
+
+        
+
+
+        // strokeText()
+
+        var strokeText = document.getElementById("myCanvas");
+        var ctx = strokeText.getContext("2d");
+        ctx.font = "30px Arial"
+        ctx.strokeText("hello world", 98,98)
+
+
+        
+// drawImage()
+
+function myKittensCanvas() {
+        var kittensImage = document.getElementById("myKittensCanvas");
+        var ctx = kittensImage.getContext("2d");
+        var img = document.getElementById("kittens")
+        ctx.drawImage(img, 0,0);
+}
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html> 
